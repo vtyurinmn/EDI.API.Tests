@@ -1,0 +1,11 @@
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\obj\Debug\EDI.API.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\EDI.API.Tests.dll
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\EDI.API.Tests.pdb
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\RestSharp.dll
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\RestSharp.xml
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\obj\Debug\EDI.API.Tests.dll
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\obj\Debug\EDI.API.Tests.pdb
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kadavr\Documents\Visual Studio 2015\Projects\EDI.API.Tests\EDI.API.Tests\bin\Debug\Newtonsoft.Json.xml
