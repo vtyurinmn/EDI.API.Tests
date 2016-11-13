@@ -1,22 +1,14 @@
 ﻿using System;
 using RestSharp;
-using Newtonsoft.Json.Linq;
 
 namespace EDI.API.Tests
 {
     public class ApiHelper
     {
-        public string ApiClientId;
-        public string Login;
-        public string Password;
-        public string BoxId;
-        public string Filename;
-        public string Filepath;
-
-        public string FormPreAuthString()
+        public string FormPreAuthString(string apiClientId, string login, string password)
 		{
             string preAuthString =
-                $"KonturEdiAuth konturediauth_api_client_id={ApiClientId},konturediauth_login={Login},konturediauth_password={Password}";
+                $"KonturEdiAuth konturediauth_api_client_id={apiClientId},konturediauth_login={login},konturediauth_password={password}";
 			return preAuthString;
 		}
 
@@ -32,38 +24,34 @@ namespace EDI.API.Tests
 			return token;
 		}
 
-		public string FormAuthString(string token)
+		public string FormAuthString(string apiClientId, string token)
 		{
 		    if (token == null) throw new ArgumentNullException(nameof(token));
-		    string authString = $"KonturEdiAuth konturediauth_api_client_id={ApiClientId},konturediauth_token={token}";
+		    string authString = $"KonturEdiAuth konturediauth_api_client_id={apiClientId},konturediauth_token={token}";
 			return authString;
 		}
 
-		public string SendMessage(string authString, Uri baseUrl)
+		public string SendMessage(string authString, Uri baseUrl, string filename, string filepath, string boxId)
 		{
 		    if (authString == null) throw new ArgumentNullException(nameof(authString));
-            var endpoint = new Uri(baseUrl, "/V1/Messages/SendMessage");
-            var client = new RestClient(endpoint);
-            var request = new RestRequest(Method.POST);
-			request.AddHeader("authorization", authString);
+            var client = new RestClient(baseUrl);
+            var request = new RestRequest("/V1/Messages/SendMessage", Method.POST);
+            request.AddHeader("authorization", authString);
             request.AddHeader("Content-Type", "multipart/form-data");
-            request.AddParameter("boxId", BoxId);
-            request.AddFile(Filename, Filepath);
+            request.AddQueryParameter("boxId", boxId);
+            request.AddFile(filename, filepath);
             IRestResponse response = client.Execute(request);
             string message = response.Content;
-
-            dynamic json = JToken.Parse(message);
-            var messageId = json.MessageId;
-            return messageId;
+            return message;
 		}
 
-		public string VerifyMessage(string authString, string messageId, Uri baseUrl)
+		public string VerifyMessage(string authString, string messageId, Uri baseUrl, string boxId)
 		{
             var endpoint = new Uri(baseUrl, "/V1/Messages/GetInboxMessage");
             var client = new RestClient(endpoint);
             var request = new RestRequest(Method.GET);
             request.AddHeader("authorization", authString);
-            request.AddParameter("boxId", BoxId);
+            request.AddParameter("boxId", boxId);
             request.AddParameter("messageId", messageId);
             IRestResponse response = client.Execute(request);
             string messageentity = response.Content;
