@@ -38,5 +38,5 @@
 
 ## Обратная связь
 
-Через почту - i.a.kadochnikov@yandex.ru
-Через Issues. :)
+* Через почту - i.a.kadochnikov@yandex.ru
+* Через Issues. :)
