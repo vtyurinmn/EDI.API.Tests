@@ -1,5 +1,8 @@
 # EDI.API.Tests
 
+# Travis CI status:
+https://travis-ci.org/vtyurinmn/EDI.API.Tests.svg?branch=master
+
 ## Небольшой disclaimer
 
 До выполнения задания на С# ничего не писал. С языками со статической типизацией долгого времени отношений не имел. Да и компьютер с ОС Windows пришлось брать под честное слово, ибо Xamarin Studio оказалась злом. :)
