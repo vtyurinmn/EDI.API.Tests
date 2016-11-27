@@ -1,7 +1,7 @@
 # EDI.API.Tests
 
 # Travis CI status:
-https://travis-ci.org/vtyurinmn/EDI.API.Tests.svg?branch=master
+[![Build Status](https://travis-ci.org/vtyurinmn/EDI.API.Tests.svg?branch=master)](https://travis-ci.org/vtyurinmn/EDI.API.Tests)
 
 ## Небольшой disclaimer
 
